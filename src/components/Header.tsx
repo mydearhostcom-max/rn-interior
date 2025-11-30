@@ -49,27 +49,39 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile/Desktop Menu Overlay */}
+      {/* Compact Menu Dropdown */}
       {isMenuOpen && (
-        <div className="fixed inset-0 top-[73px] bg-background/95 backdrop-blur-lg">
-          <nav className="container mx-auto px-6 py-12">
-            <ul className="space-y-6">
-              {navItems.map((item) => (
-                <li key={item.path}>
-                  <Link
-                    to={item.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={`text-4xl md:text-6xl font-light tracking-wide hover:text-luxury-gold transition-colors block ${
-                      location.pathname === item.path ? "text-luxury-gold" : ""
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
+        <>
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 top-[73px] bg-black/40 backdrop-blur-sm animate-fade-in"
+            onClick={() => setIsMenuOpen(false)}
+          />
+          
+          {/* Menu Box */}
+          <div className="fixed top-[85px] left-6 bg-background/90 backdrop-blur-xl border border-border shadow-2xl animate-slide-in-right rounded-sm w-64 overflow-hidden">
+            <nav className="py-4">
+              <ul className="space-y-1">
+                {navItems.map((item, index) => (
+                  <li key={item.path} style={{ animationDelay: `${index * 50}ms` }} className="animate-fade-in">
+                    <Link
+                      to={item.path}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`block px-6 py-3 text-sm tracking-widest transition-all duration-300 relative overflow-hidden group ${
+                        location.pathname === item.path 
+                          ? "text-luxury-gold bg-secondary" 
+                          : "text-foreground hover:text-luxury-gold"
+                      }`}
+                    >
+                      <span className="relative z-10">{item.label}</span>
+                      <div className="absolute inset-0 bg-secondary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        </>
       )}
     </header>
   );
