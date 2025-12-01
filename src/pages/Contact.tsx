@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import Map from "@/components/Map";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
@@ -145,7 +144,18 @@ const Contact = () => {
           {/* Map Section */}
           <div className="border-t border-border pt-16">
             <h2 className="text-2xl font-light mb-8">FIND US</h2>
-            <Map />
+            <div className="w-full h-[450px] rounded-sm overflow-hidden border border-border">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3651.4536923896544!2d90.42252727533642!3d23.766853278659145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDQ2JzAwLjciTiA5MMKwMjUnMzAuNCJF!5e0!3m2!1sen!2sbd!4v1764582249125!5m2!1sen!2sbd" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }}
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Location Map"
+              />
+            </div>
           </div>
         </section>
       </main>
