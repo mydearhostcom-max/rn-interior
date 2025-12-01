@@ -49,11 +49,10 @@ const Contact = () => {
                     <div>
                       <h3 className="text-sm tracking-widest mb-2">ADDRESS</h3>
                       <p className="text-text-secondary">
-                        Unit 12A Parkside Place<br />
-                        Cnr Paarden Eiland & East Pier Road<br />
-                        Paarden Eiland<br />
-                        Cape Town, 7405<br />
-                        South Africa
+                        Holding 1/A, Block - A<br />
+                        Main Road, Banasree<br />
+                        Rampura, Dhaka 1219<br />
+                        Bangladesh
                       </p>
                     </div>
                   </div>
@@ -62,8 +61,9 @@ const Contact = () => {
                     <Phone className="w-6 h-6 text-luxury-gold mt-1" strokeWidth={1} />
                     <div>
                       <h3 className="text-sm tracking-widest mb-2">PHONE</h3>
-                      <p className="text-text-secondary">T. +27 (0) 466 5297</p>
-                      <p className="text-text-secondary">F. +27 (0) 466 5298</p>
+                      <p className="text-text-secondary">01950265606</p>
+                      <p className="text-text-secondary">01819222457</p>
+                      <p className="text-text-secondary">01619222458</p>
                     </div>
                   </div>
 
@@ -71,7 +71,7 @@ const Contact = () => {
                     <Mail className="w-6 h-6 text-luxury-gold mt-1" strokeWidth={1} />
                     <div>
                       <h3 className="text-sm tracking-widest mb-2">EMAIL</h3>
-                      <p className="text-text-secondary">INFO@ARRCC.COM</p>
+                      <p className="text-text-secondary">info@rninteriorbd.com</p>
                     </div>
                   </div>
                 </div>
