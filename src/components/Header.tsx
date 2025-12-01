@@ -1,4 +1,4 @@
-import { Search, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
@@ -29,17 +29,11 @@ const Header = () => {
         
         <Link to="/">
           <h1 className="text-2xl font-light tracking-[0.2em] hover:text-luxury-gold transition-colors">
-            ARRCC
+            RN INTERIOR
           </h1>
         </Link>
         
         <div className="flex items-center gap-6">
-          <button className="text-sm text-muted-foreground hover:text-foreground transition-colors hidden md:block">
-            EN / US
-          </button>
-          <button className="text-muted-foreground hover:text-foreground transition-colors">
-            <Search className="w-5 h-5" />
-          </button>
           <Link 
             to="/contact"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors hidden md:block"
