@@ -35,10 +35,10 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border text-sm text-text-secondary gap-4">
-          <p>Copyright 2025 © RN INTERIOR</p>
-          <p>
-            Built with Love ❤️ By{" "}
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border text-sm text-text-secondary gap-4 md:gap-8">
+          <p className="text-center md:text-left">Copyright 2025 © RN INTERIOR</p>
+          <p className="text-center">
+            Built with ❤️ By{" "}
             <a 
               href="https://coursefiction.com" 
               target="_blank" 
@@ -48,7 +48,7 @@ const Footer = () => {
               Coursefiction
             </a>
           </p>
-          <div className="flex gap-6">
+          <div className="flex gap-6 text-center md:text-right">
             <a href="#" className="hover:text-luxury-gold transition-colors">PRIVACY</a>
             <a href="#" className="hover:text-luxury-gold transition-colors">TERMS</a>
             <a href="#" className="hover:text-luxury-gold transition-colors">SITEMAP</a>
