@@ -25,16 +25,16 @@ const Footer = () => {
           <div>
             <h3 className="text-sm tracking-widest mb-4">GET IN TOUCH</h3>
             <div className="space-y-2 text-sm text-text-secondary">
-              <p>E. INFO@ARRCC.COM</p>
-              <p>T. +27 (0) 466 5297</p>
-              <p>F. +27 (0) 466 5298</p>
+              <p>E. info@rninteriorbd.com</p>
+              <p>T. 01950265606</p>
+              <p>T. 01819222457</p>
+              <p>T. 01619222458</p>
             </div>
             <div className="mt-6 space-y-1 text-sm text-text-secondary">
-              <p>Unit 12A Parkside Place,</p>
-              <p>Cnr Paarden Eiland & East</p>
-              <p>Pier Road, Paarden Eiland,</p>
-              <p>CAPE TOWN,</p>
-              <p>SOUTH AFRICA</p>
+              <p>Holding 1/A, Block - A,</p>
+              <p>Main Road, Banasree,</p>
+              <p>Rampura, Dhaka 1219</p>
+              <p>BANGLADESH</p>
             </div>
           </div>
 
