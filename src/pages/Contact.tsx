@@ -76,14 +76,6 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="border-t border-border pt-8">
-                <h3 className="text-sm tracking-widest mb-4">OFFICE HOURS</h3>
-                <p className="text-text-secondary">
-                  Monday - Friday: 9:00 AM - 5:00 PM<br />
-                  Saturday - Sunday: Closed
-                </p>
-              </div>
             </div>
 
             {/* Contact Form */}
