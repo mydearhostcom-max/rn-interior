@@ -35,9 +35,20 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border text-sm text-text-secondary">
-          <p>© RN Interior BD 2025 | All rights reserved</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border text-sm text-text-secondary gap-4">
+          <p>Copyright 2025 © RN INTERIOR</p>
+          <p>
+            Built with Love ❤️ By{" "}
+            <a 
+              href="https://coursefiction.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-luxury-gold hover:underline transition-all"
+            >
+              Coursefiction
+            </a>
+          </p>
+          <div className="flex gap-6">
             <a href="#" className="hover:text-luxury-gold transition-colors">PRIVACY</a>
             <a href="#" className="hover:text-luxury-gold transition-colors">TERMS</a>
             <a href="#" className="hover:text-luxury-gold transition-colors">SITEMAP</a>
