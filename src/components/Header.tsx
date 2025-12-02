@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+import logo from "@/assets/rn-logo.png";
 
 const Header = () => {
   const location = useLocation();
@@ -27,10 +28,12 @@ const Header = () => {
           </button>
         </div>
         
-        <Link to="/">
-          <h1 className="text-2xl font-light tracking-[0.2em] hover:text-luxury-gold transition-colors">
-            RN INTERIOR
-          </h1>
+        <Link to="/" className="flex items-center">
+          <img 
+            src={logo} 
+            alt="RN Enterprise" 
+            className="h-12 w-auto hover:opacity-80 transition-opacity"
+          />
         </Link>
         
         <div className="flex items-center gap-6">
