@@ -1,11 +1,11 @@
 import { ArrowRight } from "lucide-react";
-
 const MainHeadline = () => {
-  return (
-    <section className="py-24 container mx-auto px-6">
+  return <section className="py-24 container mx-auto px-6">
       <div className="max-w-4xl">
-        <h2 className="text-5xl md:text-7xl font-light leading-tight mb-8">
-          SPACES THAT<br />
+        <h2 className="text-5xl md:text-7xl font-light leading-tight mb-8">SPACES THAT
+BLEND FUNCTION
+&
+ELEGANCE<br />
           BLEND<br />
           FUNCTION &<br />
           ELEGANCE
@@ -15,8 +15,6 @@ const MainHeadline = () => {
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </a>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default MainHeadline;
