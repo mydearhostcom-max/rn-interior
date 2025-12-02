@@ -31,7 +31,7 @@ const Header = () => {
         </div>
         
         <Link to="/" className="flex items-center">
-          <img alt="RN Enterprise" src="/lovable-uploads/549c9c59-4e00-4767-b103-be9bfe5a1fe9.png" className="h-15 w-auto transition-opacity opacity-100 object-cover border-0" />
+          <img alt="RN Enterprise" src="/lovable-uploads/549c9c59-4e00-4767-b103-be9bfe5a1fe9.png" className="h-12 w-auto transition-opacity opacity-100 object-cover border-0" />
         </Link>
         
         <div className="flex items-center gap-6">
