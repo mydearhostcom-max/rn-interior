@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="border-t border-border py-16">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Get in Touch */}
           <div>
             <h3 className="text-sm tracking-widest mb-4">GET IN TOUCH</h3>
@@ -23,9 +23,56 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Connect */}
+          {/* Quick Pages */}
           <div>
-            <h3 className="text-sm tracking-widest mb-4">CONNECT</h3>
+            <h3 className="text-sm tracking-widest mb-4">QUICK PAGES</h3>
+            <div className="space-y-2 text-sm text-text-secondary">
+              <a href="/" className="block hover:text-luxury-gold transition-colors">HOME</a>
+              <a href="/portfolio" className="block hover:text-luxury-gold transition-colors">PORTFOLIO</a>
+              <a href="/services" className="block hover:text-luxury-gold transition-colors">SERVICES</a>
+              <a href="/about" className="block hover:text-luxury-gold transition-colors">ABOUT</a>
+              <a href="/contact" className="block hover:text-luxury-gold transition-colors">CONTACT</a>
+            </div>
+          </div>
+
+          {/* Our Services */}
+          <div>
+            <h3 className="text-sm tracking-widest mb-4">OUR SERVICES</h3>
+            <div className="space-y-3 text-sm text-text-secondary">
+              <div>
+                <p className="text-foreground mb-1">Interior</p>
+                <div className="space-y-1 pl-2">
+                  <p>Residential Interior</p>
+                  <p>Kitchen Cabinet</p>
+                </div>
+              </div>
+              <div>
+                <p className="text-foreground mb-1">Commercial Interior</p>
+                <div className="space-y-1 pl-2">
+                  <p>Showroom Interior</p>
+                  <p>Office Interior</p>
+                  <p>Multipurpose Hall</p>
+                  <p>Studio / Theatre</p>
+                  <p>Restaurant Interior</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Exterior Services & Connect */}
+          <div>
+            <h3 className="text-sm tracking-widest mb-4">EXTERIOR</h3>
+            <div className="space-y-1 text-sm text-text-secondary mb-6">
+              <p>Aluminium Window Work</p>
+              <p>Curtain Wall / Glass Work</p>
+              <p>Spider Glass Work</p>
+              <p>Aluminium Composite Panel</p>
+              <p>Glass Door / Sensor Door</p>
+              <p>Auto / Manual Folding Door</p>
+              <p>CNC Cutting Work</p>
+            </div>
+            
+            <h3 className="text-sm tracking-widest mb-4 mt-8">CONNECT</h3>
             <div className="space-y-2 text-sm text-text-secondary">
               <p className="hover:text-luxury-gold cursor-pointer transition-colors">FACEBOOK</p>
               <p className="hover:text-luxury-gold cursor-pointer transition-colors">INSTAGRAM</p>
