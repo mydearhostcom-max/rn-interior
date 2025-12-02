@@ -1,38 +1,26 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Home, Building2, Palmtree, Layers, Lightbulb, Paintbrush } from "lucide-react";
+import { Home, Building2 } from "lucide-react";
 
-const services = [
-  {
-    icon: Home,
-    title: "RESIDENTIAL DESIGN",
-    description: "From penthouse apartments to sprawling estates, we create bespoke living spaces that reflect your lifestyle and aspirations. Our approach combines timeless elegance with contemporary comfort."
-  },
-  {
-    icon: Building2,
-    title: "HOSPITALITY DESIGN",
-    description: "We craft immersive hotel and resort experiences that captivate guests and create lasting impressions. Our designs balance luxury, functionality, and brand identity."
-  },
-  {
-    icon: Palmtree,
-    title: "LEISURE SPACES",
-    description: "Transform your leisure environments into destinations. From spa retreats to private clubs, we design spaces that elevate relaxation and entertainment."
-  },
-  {
-    icon: Layers,
-    title: "COMPLETE DESIGN PACKAGES",
-    description: "Comprehensive interior design services from concept to completion. We handle architecture, interior design, furniture specification, and art curation."
-  },
-  {
-    icon: Lightbulb,
-    title: "DESIGN CONSULTATION",
-    description: "Expert guidance for your design projects. Our consultation services provide professional insights on spatial planning, style direction, and material selection."
-  },
-  {
-    icon: Paintbrush,
-    title: "FURNITURE & DECOR",
-    description: "Curated furniture and decor selection that perfectly complements your space. We source unique pieces from around the world and create custom designs."
-  }
+const interiorServices = [
+  "Residential Interior",
+  "Kitchen Cabinet",
+  "Commercial Interior",
+  "Showroom Interior",
+  "Office Interior",
+  "Multipurpose Hall",
+  "Studio / Theatre",
+  "Restaurant Interior"
+];
+
+const exteriorServices = [
+  "Aluminium Window Work",
+  "Curtain Wall / Glass Work",
+  "Spider Glass Work",
+  "Aluminium Composite Panel",
+  "Glass Door / Sensor Door",
+  "Auto / Manual Folding Door",
+  "CNC Cutting Work"
 ];
 
 const Services = () => {
@@ -47,24 +35,41 @@ const Services = () => {
               OUR SERVICES
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              We offer comprehensive interior design and decor services for residential, 
-              hospitality, and leisure projects worldwide. Each project is approached with 
-              a unique perspective, refined sensibility, and meticulous attention to detail.
+              We offer comprehensive interior and exterior design services. Each project is 
+              approached with a unique perspective, refined sensibility, and meticulous attention to detail.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-            {services.map((service) => (
-              <div key={service.title} className="space-y-4">
-                <service.icon className="w-12 h-12 text-luxury-gold" strokeWidth={1} />
-                <h3 className="text-2xl font-light tracking-wide">
-                  {service.title}
-                </h3>
-                <p className="text-text-secondary leading-relaxed">
-                  {service.description}
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
+            {/* Interior Services */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-4 mb-8">
+                <Home className="w-12 h-12 text-luxury-gold" strokeWidth={1} />
+                <h2 className="text-3xl font-light tracking-wide">INTERIOR</h2>
               </div>
-            ))}
+              <ul className="space-y-4">
+                {interiorServices.map((service) => (
+                  <li key={service} className="text-lg text-text-secondary border-l-2 border-luxury-gold pl-4 py-2">
+                    {service}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Exterior Services */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-4 mb-8">
+                <Building2 className="w-12 h-12 text-luxury-gold" strokeWidth={1} />
+                <h2 className="text-3xl font-light tracking-wide">EXTERIOR</h2>
+              </div>
+              <ul className="space-y-4">
+                {exteriorServices.map((service) => (
+                  <li key={service} className="text-lg text-text-secondary border-l-2 border-luxury-gold pl-4 py-2">
+                    {service}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div className="border-t border-border pt-16">
