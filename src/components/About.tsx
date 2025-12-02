@@ -3,16 +3,16 @@ const About = () => {
     <section className="py-24 container mx-auto px-6">
       <div className="max-w-3xl mx-auto text-center space-y-6">
         <h2 className="text-3xl md:text-4xl font-light leading-relaxed">
-          ARRCC IS AN ACCLAIMED INTERIOR DESIGN<br />
-          AND DECOR STUDIO BASED IN CAPE TOWN,<br />
-          SOUTH AFRICA.
+          RN INTERIOR & FARJANA THAI ALUMINIUM<br />
+          IS YOUR TRUSTED PARTNER FOR COMPLETE<br />
+          INTERIOR AND EXTERIOR TRANSFORMATION.
         </h2>
         <p className="text-lg text-text-secondary leading-relaxed max-w-2xl mx-auto">
-          OUR FOOTPRINT IS GLOBAL, AS WE APPLY<br />
-          OUR DISTINCTLY REFINED DESIGN<br />
-          SENSIBILITY TO RESIDENTIAL, HOSPITALITY<br />
-          AND LEISURE INTERIORS AROUND THE<br />
-          WORLD. LET'S WORK TOGETHER.
+          WE SPECIALIZE IN DESIGNING FUNCTIONAL,<br />
+          MODERN, AND AESTHETICALLY BALANCED<br />
+          SPACES THAT MATCH YOUR LIFESTYLE AND<br />
+          BUSINESS NEEDS. LET'S BUILD SOMETHING<br />
+          REMARKABLE TOGETHER.
         </p>
       </div>
     </section>

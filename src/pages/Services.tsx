@@ -35,8 +35,9 @@ const Services = () => {
               OUR SERVICES
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              We offer comprehensive interior and exterior design services. Each project is 
-              approached with a unique perspective, refined sensibility, and meticulous attention to detail.
+              We offer comprehensive interior and exterior solutions including residential and commercial design, 
+              Thai aluminium fabrication, glass systems, and architectural installations. Every project is executed 
+              with precision, quality materials, and expert craftsmanship to ensure lasting results.
             </p>
           </div>
 
@@ -77,31 +78,31 @@ const Services = () => {
               <h2 className="text-3xl font-light mb-6">OUR PROCESS</h2>
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-xl font-light mb-2 text-luxury-gold">01 / DISCOVERY</h3>
+                  <h3 className="text-xl font-light mb-2 text-luxury-gold">01 / CONSULTATION</h3>
                   <p className="text-text-secondary">
-                    We begin by understanding your vision, lifestyle, and aspirations. 
-                    This phase includes site analysis, client consultations, and research.
+                    We start by understanding your needs, space requirements, and budget. 
+                    Our team conducts a thorough site visit to assess dimensions and technical feasibility.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-light mb-2 text-luxury-gold">02 / CONCEPT DEVELOPMENT</h3>
+                  <h3 className="text-xl font-light mb-2 text-luxury-gold">02 / DESIGN & PLANNING</h3>
                   <p className="text-text-secondary">
-                    Our team develops conceptual designs, mood boards, and spatial plans 
-                    that capture the essence of your project.
+                    We create detailed design plans, material selections, and 3D visualizations 
+                    to help you envision the final result before work begins.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-light mb-2 text-luxury-gold">03 / DESIGN REFINEMENT</h3>
+                  <h3 className="text-xl font-light mb-2 text-luxury-gold">03 / FABRICATION & INSTALLATION</h3>
                   <p className="text-text-secondary">
-                    We refine every detail, from materials and finishes to furniture 
-                    selection and lighting design, ensuring perfect harmony.
+                    Our skilled fabricators and installers work with precision using quality materials. 
+                    We ensure all aluminium, glass, and interior elements are perfectly fitted.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-light mb-2 text-luxury-gold">04 / IMPLEMENTATION</h3>
+                  <h3 className="text-xl font-light mb-2 text-luxury-gold">04 / QUALITY CHECK & HANDOVER</h3>
                   <p className="text-text-secondary">
-                    Our project management team oversees the entire implementation, 
-                    coordinating with contractors and artisans to bring the vision to life.
+                    Before completion, we conduct rigorous quality checks and final touches. 
+                    Your project is delivered on time with a commitment to durability and finish.
                   </p>
                 </div>
               </div>
