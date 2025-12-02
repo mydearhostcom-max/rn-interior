@@ -32,8 +32,9 @@ const Contact = () => {
               GET IN TOUCH
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Whether you're starting a new project or seeking design consultation, 
-              we'd love to hear from you. Let's create something extraordinary together.
+              Whether you're planning a residential interior, commercial space, or need expert 
+              aluminium and glass solutions, we're here to help. Let's discuss your project and 
+              bring your vision to life with precision and quality.
             </p>
           </div>
 

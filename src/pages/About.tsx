@@ -11,25 +11,24 @@ const About = () => {
         <section className="container mx-auto px-6 py-16">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-light mb-12 text-center">
-              ABOUT ARRCC
+              ABOUT US
             </h1>
             
             <div className="space-y-12">
               <p className="text-2xl font-light leading-relaxed text-center">
-                ARRCC is an acclaimed interior design and decor studio based in Cape Town, 
-                South Africa. Our footprint is global, as we apply our distinctly refined 
-                design sensibility to residential, hospitality and leisure interiors around the world.
+                RN Interior & Farjana Thai Aluminium is your trusted partner for complete interior and exterior 
+                transformation. We specialize in designing functional, modern, and aesthetically balanced spaces 
+                that match your lifestyle and business needs across Bangladesh.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12">
                 <div className="space-y-4">
                   <Award className="w-12 h-12 text-luxury-gold" strokeWidth={1} />
-                  <h3 className="text-2xl font-light">OUR PHILOSOPHY</h3>
+                  <h3 className="text-2xl font-light">OUR EXPERTISE</h3>
                   <p className="text-text-secondary leading-relaxed">
-                    We believe in creating spaces that are not just beautiful, but deeply personal 
-                    and reflective of those who inhabit them. Our design philosophy centers on 
-                    timeless elegance, meticulous craftsmanship, and a laid-back luxury that 
-                    defines contemporary coastal living.
+                    From residential interiors to full-scale commercial environments, we bring creativity, 
+                    precision, and long-term durability to every project. Our expertise in Thai aluminium 
+                    fabrication and glass solutions ensures high-quality installations that stand the test of time.
                   </p>
                 </div>
 
@@ -37,32 +36,29 @@ const About = () => {
                   <Users className="w-12 h-12 text-luxury-gold" strokeWidth={1} />
                   <h3 className="text-2xl font-light">OUR TEAM</h3>
                   <p className="text-text-secondary leading-relaxed">
-                    Led by visionary designers and supported by talented architects, project 
-                    managers, and craftspeople, our team brings decades of combined experience 
-                    to every project. We collaborate closely with clients, artisans, and 
-                    contractors to ensure exceptional results.
+                    Our skilled team includes experienced designers, fabricators, and installers who work 
+                    seamlessly together. We prioritize clear communication, technical excellence, and customer 
+                    satisfaction from initial consultation through final handover.
                   </p>
                 </div>
 
                 <div className="space-y-4">
                   <Globe className="w-12 h-12 text-luxury-gold" strokeWidth={1} />
-                  <h3 className="text-2xl font-light">GLOBAL REACH</h3>
+                  <h3 className="text-2xl font-light">COMPREHENSIVE SOLUTIONS</h3>
                   <p className="text-text-secondary leading-relaxed">
-                    While rooted in Cape Town, our projects span continents. From Moroccan 
-                    riads to Miami penthouses, we bring our distinctive South African 
-                    design perspective to create spaces that resonate with their context 
-                    while maintaining our signature aesthetic.
+                    Whether it's a home, office, showroom, restaurant, or multipurpose hall, we deliver 
+                    complete solutions including aluminium windows, curtain walls, spider glass systems, 
+                    ACP panels, automatic doors, and full interior design services.
                   </p>
                 </div>
 
                 <div className="space-y-4">
                   <TrendingUp className="w-12 h-12 text-luxury-gold" strokeWidth={1} />
-                  <h3 className="text-2xl font-light">RECOGNITION</h3>
+                  <h3 className="text-2xl font-light">QUALITY COMMITMENT</h3>
                   <p className="text-text-secondary leading-relaxed">
-                    Our work has been featured in leading design publications worldwide 
-                    and recognized with numerous industry awards. We're proud to have 
-                    contributed to some of the most prestigious residential and hospitality 
-                    projects internationally.
+                    We focus on reliability, craftsmanship, and timely delivery. Using premium materials 
+                    and proven techniques, we build spaces that not only look great but function smoothly 
+                    and last for years without compromise.
                   </p>
                 </div>
               </div>
@@ -71,21 +67,21 @@ const About = () => {
                 <h2 className="text-3xl font-light mb-8 text-center">OUR VALUES</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div className="text-center">
-                    <h3 className="text-xl font-light mb-3 text-luxury-gold">EXCELLENCE</h3>
+                    <h3 className="text-xl font-light mb-3 text-luxury-gold">RELIABILITY</h3>
                     <p className="text-sm text-text-secondary">
-                      Uncompromising commitment to quality in every detail
+                      Timely delivery and dependable service you can trust
                     </p>
                   </div>
                   <div className="text-center">
-                    <h3 className="text-xl font-light mb-3 text-luxury-gold">INNOVATION</h3>
+                    <h3 className="text-xl font-light mb-3 text-luxury-gold">CRAFTSMANSHIP</h3>
                     <p className="text-sm text-text-secondary">
-                      Pushing boundaries while respecting timeless principles
+                      Expert fabrication and flawless installation every time
                     </p>
                   </div>
                   <div className="text-center">
-                    <h3 className="text-xl font-light mb-3 text-luxury-gold">COLLABORATION</h3>
+                    <h3 className="text-xl font-light mb-3 text-luxury-gold">DURABILITY</h3>
                     <p className="text-sm text-text-secondary">
-                      Building lasting relationships with clients and partners
+                      Premium materials and quality that lasts for years
                     </p>
                   </div>
                 </div>
@@ -93,11 +89,12 @@ const About = () => {
 
               <div className="bg-secondary p-12 rounded-none mt-16">
                 <p className="text-2xl font-light text-center leading-relaxed">
-                  "Design is not just about aesthetics—it's about creating environments 
-                  that enhance how we live, work, and connect with each other."
+                  "We believe great spaces are built on precision, quality materials, 
+                  and a commitment to exceed expectations—creating environments that 
+                  truly work for those who use them."
                 </p>
                 <p className="text-center text-text-secondary mt-6 tracking-wider text-sm">
-                  — ARRCC DESIGN STUDIO
+                  — RN INTERIOR & FARJANA THAI ALUMINIUM
                 </p>
               </div>
             </div>

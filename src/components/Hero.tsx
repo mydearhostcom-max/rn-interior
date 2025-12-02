@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="relative h-full flex items-end justify-start">
         <div className="container mx-auto px-6 pb-16">
           <p className="text-sm text-text-secondary mb-2 tracking-wider">
-            ARRCC.CO.ZA / CAPE TOWN / SOUTH AFRICA
+            RNINTERIORBD.COM / DHAKA / BANGLADESH
           </p>
         </div>
       </div>
