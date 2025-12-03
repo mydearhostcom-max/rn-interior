@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Loader2 } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,10 +17,29 @@ const Contact = () => {
     message: ""
   });
 
+  const submitMutation = useMutation({
+    mutationFn: async () => {
+      const { error } = await supabase.from("contacts").insert([{
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone || null,
+        message: formData.message,
+      }]);
+      if (error) throw error;
+    },
+    onSuccess: () => {
+      toast.success("Thank you for your message. We'll be in touch soon!");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    },
+    onError: (error) => {
+      console.error("Submit error:", error);
+      toast.error("Failed to send message. Please try again.");
+    },
+  });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you for your message. We'll be in touch soon!");
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    submitMutation.mutate();
   };
 
   return (
@@ -90,6 +111,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="bg-secondary border-border"
+                    disabled={submitMutation.isPending}
                   />
                 </div>
 
@@ -101,6 +123,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="bg-secondary border-border"
+                    disabled={submitMutation.isPending}
                   />
                 </div>
 
@@ -111,6 +134,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="bg-secondary border-border"
+                    disabled={submitMutation.isPending}
                   />
                 </div>
 
@@ -121,14 +145,23 @@ const Contact = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="bg-secondary border-border min-h-[150px]"
+                    disabled={submitMutation.isPending}
                   />
                 </div>
 
                 <Button 
                   type="submit" 
                   className="w-full bg-luxury-gold text-background hover:bg-luxury-gold/90"
+                  disabled={submitMutation.isPending}
                 >
-                  SEND MESSAGE
+                  {submitMutation.isPending ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      SENDING...
+                    </>
+                  ) : (
+                    "SEND MESSAGE"
+                  )}
                 </Button>
               </form>
             </div>

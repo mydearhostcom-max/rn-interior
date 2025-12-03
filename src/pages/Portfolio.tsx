@@ -1,25 +1,43 @@
+import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
-import project5 from "@/assets/project-5.jpg";
-import project6 from "@/assets/project-6.jpg";
-import project7 from "@/assets/project-7.jpg";
+import ProjectSkeleton from "@/components/ProjectSkeleton";
+import ProjectGalleryDialog from "@/components/ProjectGalleryDialog";
 
-const projects = [
-  { id: 1, title: "HERMANUS RESIDENCE", location: "Hermanus, South Africa", category: "RESIDENTIAL", image: project1, description: "Contemporary coastal living" },
-  { id: 2, title: "AMAN RESIDENCES", location: "Marrakech, Morocco", category: "HOSPITALITY", image: project2, description: "Luxury resort design" },
-  { id: 3, title: "CLIFTON SUNSET", location: "Clifton, Cape Town", category: "RESIDENTIAL", image: project3, description: "Modern urban elegance" },
-  { id: 4, title: "HOTEL IVAN", location: "Miami Beach, USA", category: "HOSPITALITY", image: project4, description: "Grand lobby experience" },
-  { id: 5, title: "CLIFTON VILLA", location: "Clifton, Cape Town", category: "RESIDENTIAL", image: project3, description: "Beachfront luxury" },
-  { id: 6, title: "BEACHFRONT VILLA", location: "Plettenberg Bay", category: "RESIDENTIAL", image: project5, description: "Ocean view retreat" },
-  { id: 7, title: "MODERN VILLA", location: "Hermanus, South Africa", category: "RESIDENTIAL", image: project6, description: "Sophisticated sanctuary" },
-  { id: 8, title: "WATERFRONT", location: "Cape Town, South Africa", category: "LEISURE", image: project7, description: "Penthouse living" },
-];
+type Project = {
+  id: string;
+  title: string;
+  location: string | null;
+  description: string | null;
+  category: string;
+  subcategories: string[];
+  images: string[];
+  is_featured: boolean;
+};
 
 const Portfolio = () => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const { data: projects, isLoading } = useQuery({
+    queryKey: ["projects", "all"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("projects")
+        .select("*")
+        .order("display_order", { ascending: true });
+      if (error) throw error;
+      return data as Project[];
+    },
+  });
+
+  const handleProjectClick = (project: Project) => {
+    if (project.images.length > 1) {
+      setSelectedProject(project);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -31,46 +49,79 @@ const Portfolio = () => {
               OUR PORTFOLIO
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              A curated selection of our most distinguished residential, hospitality, 
-              and leisure projects from around the world.
+              A curated selection of our most distinguished residential, commercial, 
+              interior, and exterior projects.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 bg-border">
-            {projects.map((project) => (
-              <div
-                key={project.id}
-                className="relative aspect-[4/3] overflow-hidden group cursor-pointer bg-card"
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent opacity-90" />
-                <div className="absolute inset-0 p-8 flex flex-col justify-between">
-                  <span className="text-xs text-luxury-gold tracking-widest">
-                    {project.category}
-                  </span>
-                  <div>
-                    <p className="text-xs text-text-secondary mb-2 tracking-widest">
-                      {project.location}
-                    </p>
-                    <h3 className="text-xl font-light tracking-wide mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-text-secondary">
-                      {project.description}
-                    </p>
+            {isLoading ? (
+              <ProjectSkeleton count={9} variant="portfolio" />
+            ) : projects?.length === 0 ? (
+              <div className="col-span-3 py-20 text-center text-text-secondary">
+                No projects available yet.
+              </div>
+            ) : (
+              projects?.map((project) => (
+                <div
+                  key={project.id}
+                  className={`relative aspect-[4/3] overflow-hidden group bg-card ${
+                    project.images.length > 1 ? "cursor-pointer" : ""
+                  }`}
+                  onClick={() => handleProjectClick(project)}
+                >
+                  {project.images.length > 0 ? (
+                    <img
+                      src={project.images[0]}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-secondary flex items-center justify-center">
+                      <span className="text-text-secondary">No image</span>
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent opacity-90" />
+                  <div className="absolute inset-0 p-8 flex flex-col justify-between">
+                    <span className="text-xs text-luxury-gold tracking-widest uppercase">
+                      {project.category}
+                    </span>
+                    <div>
+                      <p className="text-xs text-text-secondary mb-2 tracking-widest">
+                        {project.location || ""}
+                      </p>
+                      <h3 className="text-xl font-light tracking-wide mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm text-text-secondary">
+                        {project.description || ""}
+                      </p>
+                      {project.images.length > 1 && (
+                        <p className="text-xs text-luxury-gold mt-2">
+                          Click to view gallery ({project.images.length} images)
+                        </p>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))
+            )}
           </div>
         </section>
       </main>
 
       <Footer />
+
+      {selectedProject && (
+        <ProjectGalleryDialog
+          open={!!selectedProject}
+          onOpenChange={() => setSelectedProject(null)}
+          images={selectedProject.images}
+          title={selectedProject.title}
+          location={selectedProject.location || undefined}
+          description={selectedProject.description || undefined}
+        />
+      )}
     </div>
   );
 };
