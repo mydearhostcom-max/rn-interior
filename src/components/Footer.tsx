@@ -1,9 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-
 const Footer = () => {
-  return (
-    <footer className="border-t border-border py-16">
+  return <footer className="border-t border-border py-16">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Get in Touch */}
@@ -12,8 +10,8 @@ const Footer = () => {
             <div className="space-y-2 text-sm text-text-secondary">
               <p>E. info@rninteriorbd.com</p>
               <p>T. 01950265606</p>
-              <p>T. 01819222457</p>
-              <p>T. 01619222458</p>
+              
+              
             </div>
             <div className="mt-6 space-y-1 text-sm text-text-secondary">
               <p>Holding 1/A, Block - A,</p>
@@ -51,12 +49,7 @@ const Footer = () => {
           <p className="text-center md:text-left">Copyright 2025 © RN INTERIOR</p>
           <p className="text-center">
             Built with ❤️ By{" "}
-            <a 
-              href="https://coursefiction.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-luxury-gold hover:underline transition-all"
-            >
+            <a href="https://coursefiction.com" target="_blank" rel="noopener noreferrer" className="text-luxury-gold hover:underline transition-all">
               Coursefiction
             </a>
           </p>
@@ -67,8 +60,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
