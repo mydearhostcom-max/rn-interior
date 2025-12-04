@@ -11,7 +11,7 @@ const ProjectSkeleton = ({ count = 8, variant = "home" }: ProjectSkeletonProps) 
       {Array.from({ length: count }).map((_, i) => (
         <div
           key={i}
-          className="relative aspect-[4/3] overflow-hidden bg-card"
+          className={`relative overflow-hidden bg-card ${variant === "portfolio" ? "aspect-square" : "aspect-[4/3]"}`}
         >
           <Skeleton className="w-full h-full" />
           <div className="absolute bottom-0 left-0 right-0 p-8 space-y-2">
