@@ -81,7 +81,7 @@ const Portfolio = () => {
                       <span className="text-text-secondary">No image</span>
                     </div>
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
                   <div className="absolute inset-0 p-8 flex flex-col justify-between">
                     <span className="text-xs text-luxury-gold tracking-widest uppercase">
                       {project.category}
