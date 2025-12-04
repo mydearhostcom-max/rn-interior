@@ -5,7 +5,7 @@ import { Code, User, Globe, Calendar } from "lucide-react";
 const AdminSystem = () => {
   const systemInfo = {
     appName: "RN Interior & Farjana Thai Aluminium",
-    version: "1.0.0",
+    version: "2.0.1",
     developer: "Coursefiction",
     website: "https://rninteriorbd.com",
     buildDate: new Date().toLocaleDateString(),
