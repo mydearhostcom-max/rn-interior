@@ -39,7 +39,7 @@ const PortfolioGrid = () => {
 
   return (
     <section className="py-12 container mx-auto px-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 bg-border">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
         {isLoading ? (
           <ProjectSkeleton count={8} variant="home" />
         ) : projects?.length === 0 ? (

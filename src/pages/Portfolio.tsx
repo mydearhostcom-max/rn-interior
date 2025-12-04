@@ -54,7 +54,7 @@ const Portfolio = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 bg-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
             {isLoading ? (
               <ProjectSkeleton count={9} variant="portfolio" />
             ) : projects?.length === 0 ? (
