@@ -37,9 +37,9 @@ const Footer = () => {
           <div>
             <h3 className="text-sm tracking-widest mb-4">CONNECT</h3>
             <div className="space-y-2 text-sm text-text-secondary">
-              <p className="hover:text-luxury-gold cursor-pointer transition-colors">FACEBOOK</p>
-              <p className="hover:text-luxury-gold cursor-pointer transition-colors">INSTAGRAM</p>
-              <p className="hover:text-luxury-gold cursor-pointer transition-colors">YOUTUBE</p>
+              <a href="https://www.facebook.com/rninteriorbd" target="_blank" rel="noopener noreferrer" className="block hover:text-luxury-gold transition-colors">FACEBOOK</a>
+              <a href="https://www.instagram.com/rninterior.bd/" target="_blank" rel="noopener noreferrer" className="block hover:text-luxury-gold transition-colors">INSTAGRAM</a>
+              <a href="https://www.youtube.com/channel/UCqXg4UEHsFQ7rLsxjLFzrCQ" target="_blank" rel="noopener noreferrer" className="block hover:text-luxury-gold transition-colors">YOUTUBE</a>
             </div>
           </div>
         </div>
@@ -54,9 +54,8 @@ const Footer = () => {
             </a>
           </p>
           <div className="flex gap-6 text-center md:text-right">
-            <a href="#" className="hover:text-luxury-gold transition-colors">PRIVACY</a>
-            <a href="#" className="hover:text-luxury-gold transition-colors">TERMS</a>
-            <a href="#" className="hover:text-luxury-gold transition-colors">SITEMAP</a>
+            <a href="/privacy" className="hover:text-luxury-gold transition-colors">PRIVACY</a>
+            <a href="/terms" className="hover:text-luxury-gold transition-colors">TERMS</a>
           </div>
         </div>
       </div>
