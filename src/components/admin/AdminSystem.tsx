@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Code, User, Globe, Calendar } from "lucide-react";
-
 const AdminSystem = () => {
   const systemInfo = {
     appName: "RN Interior & Farjana Thai Aluminium",
@@ -9,11 +8,9 @@ const AdminSystem = () => {
     developer: "Coursefiction",
     website: "https://rninteriorbd.com",
     buildDate: new Date().toLocaleDateString(),
-    environment: "Production",
+    environment: "Production"
   };
-
-  return (
-    <div>
+  return <div>
       <h2 className="text-3xl font-light mb-8">System Information</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -62,33 +59,10 @@ const AdminSystem = () => {
         </Card>
 
         <Card className="bg-card border-border md:col-span-2">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <Globe className="w-5 h-5 text-luxury-gold" />
-              Technical Stack
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex flex-wrap gap-2">
-              {[
-                "React",
-                "TypeScript",
-                "Tailwind CSS",
-                "Vite",
-                "Lovable Cloud",
-                "Tanstack Query",
-                "Shadcn UI",
-              ].map((tech) => (
-                <Badge key={tech} variant="outline" className="px-3 py-1">
-                  {tech}
-                </Badge>
-              ))}
-            </div>
-          </CardContent>
+          
+          
         </Card>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default AdminSystem;
