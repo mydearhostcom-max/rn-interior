@@ -65,7 +65,7 @@ const Portfolio = () => {
               projects?.map((project) => (
                 <div
                   key={project.id}
-                  className={`relative aspect-[4/3] overflow-hidden group bg-card ${
+                  className={`relative aspect-square overflow-hidden group bg-card ${
                     project.images.length > 1 ? "cursor-pointer" : ""
                   }`}
                   onClick={() => handleProjectClick(project)}
