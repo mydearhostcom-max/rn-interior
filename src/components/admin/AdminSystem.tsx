@@ -6,7 +6,7 @@ const AdminSystem = () => {
   const systemInfo = {
     appName: "RN Interior & Farjana Thai Aluminium",
     version: "1.0.0",
-    developer: "Lovable AI",
+    developer: "Coursefiction",
     website: "https://rninteriorbd.com",
     buildDate: new Date().toLocaleDateString(),
     environment: import.meta.env.MODE,
