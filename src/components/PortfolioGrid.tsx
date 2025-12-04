@@ -66,7 +66,7 @@ const PortfolioGrid = () => {
                   <span className="text-text-secondary">No image</span>
                 </div>
               )}
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/30 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <p className="text-xs text-text-secondary mb-2 tracking-widest">
                   {project.location || ""}
