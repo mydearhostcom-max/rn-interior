@@ -9,7 +9,7 @@ const AdminSystem = () => {
     developer: "Coursefiction",
     website: "https://rninteriorbd.com",
     buildDate: new Date().toLocaleDateString(),
-    environment: import.meta.env.MODE,
+    environment: "Production",
   };
 
   return (
