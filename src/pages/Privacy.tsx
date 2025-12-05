@@ -1,9 +1,14 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const Privacy = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Privacy Policy" 
+        description="Learn how RN Interior & Farjana Thai Aluminium collects, uses, and protects your personal information. Read our privacy policy for details on data security and your rights."
+      />
       <Header />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-4xl">

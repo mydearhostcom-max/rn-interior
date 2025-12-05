@@ -3,6 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -44,6 +45,10 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Contact" 
+        description="Get in touch with RN Interior & Farjana Thai Aluminium for your interior design and aluminium fabrication needs in Dhaka, Bangladesh. Call us or visit our office in Banasree."
+      />
       <Header />
       
       <main className="pt-24">
