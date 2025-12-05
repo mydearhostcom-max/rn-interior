@@ -2,9 +2,10 @@ import { ArrowRight } from "lucide-react";
 const MainHeadline = () => {
   return <section className="py-24 container mx-auto px-6">
       <div className="max-w-4xl">
-        <h2 className="text-5xl md:text-7xl font-light leading-tight mb-8">SPACES THAT
-BLEND FUNCTION
-&
+        <h2 className="text-5xl font-light leading-tight mb-8 md:text-5xl">SPACES THAT BLEND
+FUNCTION & ELEGANCE
+BLEND
+FUNCTION &
 ELEGANCE<br />
           BLEND<br />
           FUNCTION &<br />
