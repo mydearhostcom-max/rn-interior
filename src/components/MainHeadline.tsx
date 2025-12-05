@@ -2,9 +2,8 @@ import { ArrowRight } from "lucide-react";
 const MainHeadline = () => {
   return <section className="py-24 container mx-auto px-6">
       <div className="max-w-4xl">
-        <h2 className="text-5xl font-light leading-tight mb-8 md:text-5xl">​Best Interior & Exterior
-Designer Company<br />
-          BLEND<br />
+        <h2 className="text-5xl font-light leading-tight mb-8 md:text-5xl">​<br />
+          INSPIRED BY LIVING.     <br />
           ​<br />
           ​
         </h2>
