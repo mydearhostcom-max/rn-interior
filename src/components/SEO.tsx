@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 
 interface SEOProps {
   title: string;
@@ -11,6 +12,11 @@ const SITE_URL = "https://rninteriorbd.com";
 
 const SEO = ({ title, description }: SEOProps) => {
   const fullTitle = `${title} | ${SITE_NAME}`;
+  
+  // Directly update document.title for immediate effect
+  useEffect(() => {
+    document.title = fullTitle;
+  }, [fullTitle]);
   
   return (
     <Helmet>
