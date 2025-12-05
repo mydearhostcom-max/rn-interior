@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Home, Building2 } from "lucide-react";
 
 const interiorServices = [
@@ -26,6 +27,10 @@ const exteriorServices = [
 const Services = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Services" 
+        description="Comprehensive interior and exterior services including residential design, commercial interiors, Thai aluminium fabrication, curtain walls, glass systems, and ACP panels in Bangladesh."
+      />
       <Header />
       
       <main className="pt-24">

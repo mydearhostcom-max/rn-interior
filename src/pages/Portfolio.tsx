@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProjectSkeleton from "@/components/ProjectSkeleton";
 import ProjectGalleryDialog from "@/components/ProjectGalleryDialog";
+import SEO from "@/components/SEO";
 
 type Project = {
   id: string;
@@ -40,6 +41,10 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Portfolio" 
+        description="Explore our distinguished collection of residential and commercial interior design projects, Thai aluminium fabrication, and glass solutions across Bangladesh."
+      />
       <Header />
       
       <main className="pt-24">

@@ -1,10 +1,15 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Award, Users, Globe, TrendingUp } from "lucide-react";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="About" 
+        description="Learn about RN Interior & Farjana Thai Aluminium - your trusted partner for interior design, Thai aluminium fabrication, and glass solutions in Bangladesh since years of excellence."
+      />
       <Header />
       
       <main className="pt-24">
