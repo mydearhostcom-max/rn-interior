@@ -1,7 +1,8 @@
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
-  return <footer className="border-t border-border py-16">
+  return (
+    <footer className="border-t border-border py-16">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Get in Touch */}
@@ -10,8 +11,6 @@ const Footer = () => {
             <div className="space-y-2 text-sm text-text-secondary">
               <p>E. info@rninteriorbd.com</p>
               <p>T. 01950265606</p>
-              
-              
             </div>
             <div className="mt-6 space-y-1 text-sm text-text-secondary">
               <p>Holding 1/A, Block - A,</p>
@@ -25,11 +24,11 @@ const Footer = () => {
           <div>
             <h3 className="text-sm tracking-widest mb-4">QUICK PAGES</h3>
             <div className="space-y-2 text-sm text-text-secondary">
-              <a href="/" className="block hover:text-luxury-gold transition-colors">HOME</a>
-              <a href="/portfolio" className="block hover:text-luxury-gold transition-colors">PORTFOLIO</a>
-              <a href="/services" className="block hover:text-luxury-gold transition-colors">SERVICES</a>
-              <a href="/about" className="block hover:text-luxury-gold transition-colors">ABOUT</a>
-              <a href="/contact" className="block hover:text-luxury-gold transition-colors">CONTACT</a>
+              <Link to="/" className="block hover:text-luxury-gold transition-colors">HOME</Link>
+              <Link to="/portfolio" className="block hover:text-luxury-gold transition-colors">PORTFOLIO</Link>
+              <Link to="/services" className="block hover:text-luxury-gold transition-colors">SERVICES</Link>
+              <Link to="/about" className="block hover:text-luxury-gold transition-colors">ABOUT</Link>
+              <Link to="/contact" className="block hover:text-luxury-gold transition-colors">CONTACT</Link>
             </div>
           </div>
 
@@ -54,11 +53,13 @@ const Footer = () => {
             </a>
           </p>
           <div className="flex gap-6 text-center md:text-right">
-            <a href="/privacy" className="hover:text-luxury-gold transition-colors">PRIVACY</a>
-            <a href="/terms" className="hover:text-luxury-gold transition-colors">TERMS</a>
+            <Link to="/privacy" className="hover:text-luxury-gold transition-colors">PRIVACY</Link>
+            <Link to="/terms" className="hover:text-luxury-gold transition-colors">TERMS</Link>
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
