@@ -41,10 +41,11 @@ Deno.serve(async (req) => {
         status: 200 
       }
     );
-  } catch (error) {
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
     console.error("Keep-alive function error:", error);
     return new Response(
-      JSON.stringify({ success: false, error: error.message }),
+      JSON.stringify({ success: false, error: errorMessage }),
       { 
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 500 
